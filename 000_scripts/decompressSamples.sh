@@ -7,6 +7,9 @@ PATH_CURRENT=$PWD
 PATH_DATA=${PATH_CURRENT}/020_samples
 
 #iterate over all timestamps and decompress samples
+for year in ${PATH_DATA}/*; do
+	cd ${year}
 for timestamp in ${PATH_DATA}/*.tar.gz; do
 	tar -xzvf ${timestamp}
+done
 done
